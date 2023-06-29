@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.project.staragile</groupId>
 	<artifactId>banking</artifactId>
-<!-- 	<version>0.0.1</version> -->
+	<version>0.0.1</version>
 	<packaging>war</packaging>
 	<name>banking</name>
 	<description>Banking Microservice Project for StarAgile DevOps Project</description>
