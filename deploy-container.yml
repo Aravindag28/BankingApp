@@ -13,4 +13,3 @@
 
   - name: Deploy Docker Container
     command: docker run -itd -p 8085:8081 aravindag/bankingapp:latest
-s
