@@ -4,15 +4,12 @@
   tasks : 
   - name: updating apt
     command : yum update
-  
-  - name: Check if Docker is installed
-      stat:
-        path: /usr/bin/docker
-      register: docker_installed
-      # This task checks if Docker is already installed by verifying the presence of the Docker executable
-  
-  - name : Install Docker & Start Docker Service
-    command : yum install -y docker.io && sudo systemctl start docker
+
+  - name : Install Docker
+    command : yum install -y docker.io
+
+  - name : Start Docker Service
+    command : sudo systemctl start docker
 
   - name: Deploy Docker Container
     command: docker run -itd -p 8080:8081 aravindag/insurance:latest
