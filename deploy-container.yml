@@ -3,7 +3,7 @@
   become: true
   tasks : 
   - name: updating apt
-    command : yum update
+    command : yum update -y
 
   - name : Install Docker
     command : yum install -y docker.io
