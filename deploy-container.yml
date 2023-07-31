@@ -5,8 +5,12 @@
   - name: updating apt
     command : yum update -y
 
-  - name : Install Docker
-    command : yum install -y docker.io
+  - name: Install Docker on Amazon Linux
+  become: true
+  yum:
+    name: docker
+    state: present
+    enablerepo: amzn2extra-docker
 
   - name : Start Docker Service
     command : sudo systemctl start docker
